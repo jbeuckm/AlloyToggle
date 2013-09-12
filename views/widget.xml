@@ -1,0 +1,5 @@
+<Alloy>
+
+	<ImageView id="image" class="toggle" onClick="clickImage"/>
+
+</Alloy>
