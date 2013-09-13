@@ -32,7 +32,7 @@ function clickImage(e) {
 
 
 function sendChangeEvent() {
-	$.image.fireEvent('change', { value: value });
+	$.view.fireEvent('change', { value: value });
 }
 
 
