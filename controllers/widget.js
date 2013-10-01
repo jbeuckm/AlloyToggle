@@ -2,15 +2,25 @@ var args = arguments[0] || {};
 
 var value = false;
 
+
+var onImage = args.onImage || '/Toggle/checkbox-on.png';
+var offImage = args.offImage || '/Toggle/checkbox-off.png';
+function setImages(on, off) {
+	onImage = on;
+	offImage = off;
+	updateDisplay();
+}
+
+
 function updateDisplay() {
 	
 	$.image.value = value;
 
 	if (value) {
-	    $.image.image = args.onImage || '/Toggle/checkbox-on.png';
+	    $.image.image = onImage;
 	}
 	else {
-	    $.image.image = args.offImage || '/Toggle/checkbox-off.png';
+	    $.image.image = offImage;
 	}
 }
  
@@ -39,6 +49,7 @@ function sendChangeEvent() {
 // init from text attribute value
 setValue(args.value);
 
+exports.setImages = setImages;
 exports.setValue = setValue;
 exports.getValue = getValue;
 
