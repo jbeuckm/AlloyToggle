@@ -9,10 +9,10 @@ describe("Toggle Tests", function() {
 
 		it("can init the toggle value with string attributes", function() {
 		
-			var tester = Alloy.createWidget("checkbox", {value:'true'});
+			var tester = Alloy.createWidget("Toggle", {value:'true'});
 			expect(tester.getValue()).toEqual('true');
 			
-			tester = Alloy.createWidget("checkbox", {value:'false'});
+			tester = Alloy.createWidget("Toggle", {value:'false'});
 			expect(tester.getValue()).toEqual('false');
 			
 		});
